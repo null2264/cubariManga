@@ -34,7 +34,7 @@ class Chapter:
         self.name = name
         self.volume = volume
         self.weblink = BASE_URL + weblink
-        self.pages = [self.weblink + p for p in pages if str(p).endswith("g")]
+        self.pages = [self.weblink + "/" + p for p in pages if str(p).endswith("g")]
 
     def __str__(self):
         return self.name
