@@ -98,6 +98,7 @@ def cubarify(manga):
         "title": manga.name,
         "description": "",
         "artist": "",
+        "author": "",
         "cover": ""
     }
 
