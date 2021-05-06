@@ -67,16 +67,14 @@ def getMangaChapters(number: int=None):
     tree = html.fromstring(init.text)
     tempChapters = [c for c in tree.xpath("//li/a") if str(c.xpath("./text()")[0]).startswith("ch")]
     chapters = []
-    for c in tempChapters:
+    for i, c in enumerate(tempChapters):
         chapter = c.xpath("./text()")[0]
-        if not str(chapter).startswith("ch"):
-            continue
         regex = CHAPTER_REGEX.search(chapter)
         name = regex[2]
         if name.startswith(" "):
             name = name[1:]
         index = regex[1]
-        print("Getting chapter {}/{}\r".format(index, len(tempChapters)-1))
+        print("Getting chapter [{}/{}]\r".format(i+1, len(tempChapters)))
         weblink = c.xpath("./@href")[0]
 
         # Get all pages
