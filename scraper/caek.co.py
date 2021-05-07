@@ -75,7 +75,7 @@ def getMangaChapters(number: int=None):
         if name.startswith(" "):
             name = name[1:]
         index = regex[1]
-        print("Getting chapter [{}/{}]\r".format(i+1, len(tempChapters)))
+        print("Getting chapter [{}/{}]".format(i+1, len(tempChapters)), end="\r")
         weblink = c.xpath("./@href")[0]
 
         # Get all pages
