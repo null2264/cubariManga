@@ -63,6 +63,7 @@ def getMangaChapters(number: int=None):
     chosen = mangaList[number]
 
     # Get all chapters
+    # TODO: Cache/Log already processed chapter, to reduce requests
     init = requests.get(chosen.weblink)
     tree = html.fromstring(init.text)
     tempChapters = [c for c in tree.xpath("//li/a") if str(c.xpath("./text()")[0]).startswith("ch")]
@@ -90,7 +91,9 @@ def getMangaChapters(number: int=None):
     return chosen
 
 
-def cubarify(manga):
+def cubarify(manga: Manga, _print: bool=False):
+    # Template for cubari json file
+    # TODO: Cache/Log already processed manga, so only chapters will be printed/returned
     result = {
         "chapters": {},
         "title": manga.name,
@@ -110,11 +113,12 @@ def cubarify(manga):
             "last_updated": datetime.datetime.now().timestamp()
         }
         result["chapters"][chapter.index] = chapterDict
-    print(json.dumps(result, indent=4))
+
+    if _print:
+        print(json.dumps(result, indent=4))
     return result
 
 
-manga = getMangaChapters()
-print(manga.chapters[0].pages)
-cubarify(manga)
-# print(getMangaList()[0].weblink)
+if __name__ == "__main__":
+    manga = getMangaChapters()
+    cubarify(manga, True)
