@@ -103,7 +103,7 @@ def cubarify(manga: Manga, _print: bool=False):
         "cover": ""
     }
 
-    for chapter in manga.chapters:
+    for chapter in reversed(manga.chapters):
         chapterDict = {
             "title": chapter.name,
             "volume": str(chapter.volume),
