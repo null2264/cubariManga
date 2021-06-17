@@ -1,12 +1,20 @@
 {
     "chapters":{
+	"208":{
+            "title":"Infiltrating the Teachers' Dorm!",
+            "volume":"21",
+            "groups":{
+                "Misfits Scans":"/proxy/api/imgur/chapter/GTnvHpI/"
+	    },
+            "last_updated":1623926070
+	},
 	"207":{
             "title":"The Path to Demon King",
             "volume":"21",
             "groups":{
                 "Misfits Scans":"/proxy/api/imgur/chapter/JuTN9v1/"
 	    },
-            "last_updated": 1623374883
+            "last_updated":1623374883
 	},
 	"206":{
             "title":"The Golden Lions",
