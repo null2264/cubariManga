@@ -1,5 +1,13 @@
 {
     "chapters":{
+	"210":{
+            "title":"",
+            "volume":"21",
+            "groups":{
+                "Misfits Scans":"/proxy/api/imgur/chapter/ldhmWwz/"
+	    },
+            "last_updated":1625278907
+	},
 	"209":{
             "title":"A New Member",
             "volume":"21",
