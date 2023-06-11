@@ -1,5 +1,6 @@
-`Cubari Manga`
---------------
+# `Cubari Manga`
+
+## Archived: This was made as an alternative source to MangaDex for me to use in Tachiyomi back when their website is dead and undergoing rewrite phase. Now that it's back online, I don't see a reason to keep this repo up.
 
 Plan:
 - Log/cache already scraped page/chapter to reduce unnecessary requests
